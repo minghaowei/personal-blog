@@ -1,0 +1,49 @@
+.top-bar{
+  font-family: 'Merienda', cursive;
+}
+
+.about_logo{
+  color: #242426;
+}
+
+.blog_logo{
+  color: #4e0182;
+}
+
+.github_logo{
+  color: #3a3a3a;
+}
+
+.link_logo{
+  color: rgb(47,118,176)
+}
+
+.login_logo{
+  color: #d8996c;
+}
+
+.logout_logo{
+  color: #d8996c;
+}
+
+.new_logo{
+  color: #639af2;
+}
+
+.draft_logo{
+  color: #3db72a;
+}
+
+.list_post{
+  font-family: 'Merienda', cursive;
+}
+
+.list_comment{
+  font-size: 0.5em;
+}
+
+.postcontent{
+  border-top: 2px solid #0e4677;
+  border-bottom: 2px solid #0e4677;
+  margin-bottom: 10px;
+}

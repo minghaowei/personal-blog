@@ -1,0 +1,45 @@
+{% extends "blog/base.html" %}
+{%block body_block%}
+  <h1 class="post_list">{{post.title}}</h1>
+  {%if post.published_date%}
+    <div>
+      {{post.published_date}}
+    </div>
+  {%else%}
+    <button><a class="btn btn-default" role="button" href="{%url 'post_publish' pk=post.pk%}">Publish</a></button>
+  {%endif%}
+  <div class="postcontent">
+  <p>{{post.text|safe|linebreaksbr}}</p>
+</div>
+  {%if user.is_authenticated%}
+    <button><a class="btn-group btn-group-xs" role="button" href="{%url 'post_update' pk=post.pk%}">
+      <i class="fas fa-edit"></i>
+    </a></button>
+    <button><a class="btn-group btn-group-sm" role="button" href="{%url 'post_delete' pk=post.pk%}">
+      <i class="fas fa-trash-alt"></i>
+    </a></button>
+  {%endif%}
+  <hr>
+  <a class="btn btn-default btn-comment" href="{%url 'add_comment_to_post' pk=post.pk%}">New Comment</a>
+
+  <div class="container">
+    {%for comment in post.comments.all%}
+    <br>
+      {%if user.published_date__lte or comment.approved_comment%}
+        {{comment.create_date}}
+        {%if not comment.approve_comments%}
+        <button><a class="btn btn-default btn-sm" href="{%url 'comment_remove' pk=comment.pk%}">
+          <span class='glyphicon glyphicon-remove'></span>
+        </a></button>
+        <a class="btn btn-primary" href="{%url 'comment_approve' pk=comment.pk%}">
+          <span class='glyphicon glyphicon-ok'></span>
+        </a>
+        {%endif%}
+        <p>{{comment.text|safe|linebreaks}}</p>
+        <p>Post By: {{comment.author}}</p>
+      {%endif%}
+      {%empty%}
+        <p><br>No Comments Yet..</p>
+    {%endfor%}
+  </div>
+{%endblock%}
