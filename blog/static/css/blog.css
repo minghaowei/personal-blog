@@ -40,16 +40,34 @@
   border-top: solid 1px rgb(238,238,238);
 }
 
+#post_line{
+  display: flex;
+  justify-content: space-between;
+}
+
+#post_title{
+  display: inline-block;
+
+}
+
+#post_date{
+  display: inline-block;
+  color: rgh(78,78,78);
+}
+
+footer{
+  color: rgb(119,119,119)
+}
+
 body{
   font-family: 'Sawarabi Mincho', sans-serif;
 }
 
 .postcontent{
-  border-top: 2px solid #0e4677;
-  border-bottom: 2px solid #0e4677;
-  margin-bottom: 10px;
+  color: rgb(78,78,78);
 }
 
 .about{
   text-align: left;
+  color: rgb(78,78,78);
 }

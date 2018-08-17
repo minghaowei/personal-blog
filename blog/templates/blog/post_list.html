@@ -3,14 +3,10 @@
 <div class="centertage">
   {%for post in post_list%}
   <div class="post">
-    <span></span>
-    <h3 ><a class="list_post" href="{%url 'post_detail' pk=post.pk%}">{{post.title}}</a></h1>
-    </span>
-    <span>
-    <div class="date">
-      <p>Published on:{{post.published_date|date:"D M Y"}}</p>
+    <div id="post_line">
+      <div id="post_title"><h4><a class="list_post" href="{%url 'post_detail' pk=post.pk%}">{{post.title}}</a><h4></div>
+      <div id="post_date"><h4>Published on:{{post.published_date|date:"D M Y"}}</h4></div>
     </div>
-    </span>
   </div>
   {%endfor%}
 </div>

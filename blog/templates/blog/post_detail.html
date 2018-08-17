@@ -10,19 +10,19 @@
   {%endif%}
   <div class="postcontent">
   <p>{{post.text|safe|linebreaksbr}}</p>
-</div>
+  </div>
   {%if user.is_authenticated%}
-    <button><a class="btn-group btn-group-xs" role="button" href="{%url 'post_update' pk=post.pk%}">
+    <button><a class="btn-group btn-group-lg" role="button" href="{%url 'post_update' pk=post.pk%}">
       <i class="fas fa-edit"></i>
     </a></button>
-    <button><a class="btn-group btn-group-sm" role="button" href="{%url 'post_delete' pk=post.pk%}">
+    <button><a class="btn-group btn-group-lg" role="button" href="{%url 'post_delete' pk=post.pk%}">
       <i class="fas fa-trash-alt"></i>
     </a></button>
   {%endif%}
   <hr>
-  <a class="btn btn-default btn-comment" href="{%url 'add_comment_to_post' pk=post.pk%}">New Comment</a>
+  <!--<a class="btn btn-default btn-comment" href="{%url 'add_comment_to_post' pk=post.pk%}">New Comment</a>-->
 
-  <div class="container">
+  <!--<div class="container">
     {%for comment in post.comments.all%}
     <br>
       {%if user.published_date__lte or comment.approved_comment%}
@@ -41,5 +41,5 @@
       {%empty%}
         <p><br>No Comments Yet..</p>
     {%endfor%}
-  </div>
+  </div>-->
 {%endblock%}
