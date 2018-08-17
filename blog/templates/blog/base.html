@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="{%static 'css/blog.css'%}">
 
     <!--google font-->
-    <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -51,8 +51,8 @@
           <ul class="nav nav-justified top-bar">
             <li><a href="{%url 'post_list'%}"><i class="fab fa-blogger blog_logo"></i> Blog</a></li>
             <li><a href="{%url 'about'%}"><i class="fas fa-glasses about_logo"></i> About</a></li>
-            <li><a href="https://www.linkedin.com/in/minghao-wei-398934126"><i class="fab fa-linkedin link_logo"></i> Linkedin</a></li>
-            <li><a href="https://github.com/minghaowei"><i class="fab fa-github github_logo"></i> Github</a></li>
+            <li><a href="https://www.linkedin.com/in/minghao-wei-398934126" target="_blank"><i class="fab fa-linkedin link_logo"></i> Linkedin</a></li>
+            <li><a href="https://github.com/minghaowei" target="_blank"><i class="fab fa-github github_logo"></i> Github</a></li>
             {%if user.is_authenticated%}
             <li><a href="{%url 'post_new'%}"><i class="fas fa-plus-square new_logo"></i> Post</a></li>
             <li><a href="{%url 'post_draft_list'%}"><i class="fas fa-file-alt draft_logo"></i> Draft</a></li>
@@ -63,16 +63,19 @@
           </ul>
         </nav>
       </div>
-
+      <br>
+      <div class="block_body">
       <!-- Jumbotron -->
       {%block body_block%}
 
 
       {%endblock%}
-
+      </div>
       <!-- Site footer -->
       <footer class="footer">
-        <p>&copy; 2016 Company, Inc.</p>
+        <p>&copy; Minghao Wei</p>
+        <p>Master Conputer Science, Ira. A Fulton Engineering, Arizona State University</p>
+        <p>mwei15@asu.edu</p>
       </footer>
 
     </div> <!-- /container -->

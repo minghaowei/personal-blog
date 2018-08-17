@@ -36,20 +36,8 @@
   font-size: 0.5em;
 }
 
-.block_body{
-  border-top: solid 1px rgb(238,238,238);
-}
-
-body{
-  font-family: 'Sawarabi Mincho', sans-serif;
-}
-
 .postcontent{
   border-top: 2px solid #0e4677;
   border-bottom: 2px solid #0e4677;
   margin-bottom: 10px;
-}
-
-.about{
-  text-align: left;
 }
